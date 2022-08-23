@@ -59,6 +59,12 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
+## Swagger UI
+```bash
+http://localhost:3030/docs
+```
+![Screenshot](docs/assets/swagger-ui.png)
+
 ## Support
 
 No longer support by Duckdev84 LOL....
