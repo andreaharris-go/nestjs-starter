@@ -1,9 +1,8 @@
 {
-  "name": "nestjs-example",
-  "version": "0.2.0",
+  "name": "nestjs-starter",
+  "version": "9.0.11",
   "description": "nest.js starter kit",
   "author": "Duckdev84",
-  "private": true,
   "license": "MIT",
   "scripts": {
     "prebuild": "rimraf dist",
