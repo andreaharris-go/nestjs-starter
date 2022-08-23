@@ -15,7 +15,7 @@ async function bootstrap() {
 
   const options = new DocumentBuilder()
     .setTitle('NestJS Starter Kit')
-    .setDescription("This's made for NestJS project initiation.")
+    .setDescription('This made for NestJS project initiation.')
     .setVersion('2.0')
     .addBearerAuth()
     .build();

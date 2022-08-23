@@ -14,7 +14,7 @@ import { ExampleModule } from '../example/example.module';
       envFilePath: '.env',
       isGlobal: true,
     }),
-    MongooseModule.forRoot('mongodb://localhost/cpm'),
+    MongooseModule.forRoot(process.env.MONGODB_URL),
     ScheduleModule.forRoot(),
     ExampleModule,
   ],
