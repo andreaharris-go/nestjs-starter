@@ -17,8 +17,14 @@
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
+    "resolveJsonModule": true,
     "paths": {
       "@/src": ["src/*"],
+      "@/constants/*": ["src/constants/*"],
+      "@/config/*": ["src/config/*"],
+      "@/module/logger/*": ["src/modules/logger/*"],
+      "@/common/abstract/*": ["src/common/abstract/*"],
+      "@/common/middleware/*": ["src/common/middleware/*"],
       "@/example/queue/*": ["src/modules/example/queue/*"]
     }
   }

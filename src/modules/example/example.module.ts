@@ -16,6 +16,7 @@ import { ExampleQueueRunnerController } from './controller/exampleQueueRunner.co
 import { ConfigModule } from '@nestjs/config';
 import configuration from '../../config/configuration';
 import { ExampleMongoCreateController } from './controller/exampleMongoCreate.controller';
+import { RedisGetSetSchedule } from './schedule/redisGetSet.schedule';
 
 @Module({
   imports: [
@@ -37,7 +38,12 @@ import { ExampleMongoCreateController } from './controller/exampleMongoCreate.co
       },
     }),
   ],
-  providers: [ExampleService, FetchDataSchedule, ExampleProcessor],
+  providers: [
+    ExampleService,
+    FetchDataSchedule,
+    ExampleProcessor,
+    RedisGetSetSchedule,
+  ],
   controllers: [
     ExampleMongoGetAllController,
     ExampleMongoGetByIdController,
