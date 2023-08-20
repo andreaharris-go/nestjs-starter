@@ -51,3 +51,7 @@ Thumbs.db
 .env
 
 package-lock.json
+!/service-example/.idea/
+!/service-example/package-lock.json
+!/gateway/.idea/
+!/gateway/package-lock.json

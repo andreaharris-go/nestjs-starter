@@ -1,0 +1,42 @@
+version: "3.9"
+
+services:
+  redis:
+    image: redis:latest
+    container_name: redis-container
+    ports:
+      - 6379:6379
+
+  mongodb:
+    image: mongo:6
+    container_name: mongodb-container
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=example
+    volumes:
+      - mongodb-data:/data/db
+    ports:
+      - 27017:27017
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq-container
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+    ports:
+      - 15672:15672
+      - 5672:5672
+
+  vault:
+    container_name: vault-container
+    image: hashicorp/vault:latest
+    environment:
+     VAULT_DEV_ROOT_TOKEN_ID: "123456789"
+    ports:
+      - 8200:8200
+    cap_add:
+      - IPC_LOCK
+
+volumes:
+  mongodb-data:
